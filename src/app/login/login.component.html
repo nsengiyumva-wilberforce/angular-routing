@@ -1,0 +1,23 @@
+<div class="login">
+    <div class="hero is-fullheight">
+        <div class="hero-body has-text-centered">
+            <div class="container">
+                <div class="columns is-centered">
+                    <div class="box form">
+                        <p class="title">Create Account</p>
+                        <form action="">
+                            <input type="text" class="input" placeholder="Email" name="email" [(ngModel)]="email">
+                            <input type="password" class="input" placeholder="password" name="password" [(ngModel)]="password">
+                        </form>
+                        <div class="select">
+                            <select name="userType" class="has-text-centered" [(ngModel)]="userType">
+                                <option value="customer" *ngFor="let item of userTypes" [value]="item.type">{{item.type}}</option>
+                            </select>
+                        </div>
+                        <button class="button is-fullwidth is-warning" (click)="submit()">Create Account</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
